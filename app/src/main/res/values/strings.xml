@@ -2,4 +2,10 @@
     <string name="app_name">WalletApp</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello">Hello</string>
+    <string name="accounts_text">Счета</string>
+    <string name="daily_tab_text">День</string>
+    <string name="weekly_tab_text">Неделя</string>
+    <string name="monthly_tab_text">Месяц</string>
+    <string name="yearly_tab_text">Год</string>
 </resources>

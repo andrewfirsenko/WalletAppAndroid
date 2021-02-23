@@ -1,16 +1,18 @@
 package ru.cutepool.walletapp.screens.accounts
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.google.android.material.tabs.TabLayout
+import kotlinx.android.synthetic.main.fragment_accounts.*
+import kotlinx.android.synthetic.main.toolbar.*
 import ru.cutepool.walletapp.R
 import ru.cutepool.walletapp.RouterViewModelFactory
 import ru.cutepool.walletapp.activities.main.MainViewModel
 import ru.cutepool.walletapp.helper.CiceroneHelper
-import ru.terrakok.cicerone.android.support.SupportAppNavigator
 
 
 class AccountsFragment : Fragment() {
@@ -19,6 +21,7 @@ class AccountsFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -30,6 +33,8 @@ class AccountsFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
 
         initViewModel()
+        setupTabs()
+        setupTabsToolbar()
     }
 
     private fun initViewModel() {
@@ -37,6 +42,30 @@ class AccountsFragment : Fragment() {
         mainViewModel = requireActivity().run {
             ViewModelProvider(this, mainViewModelFactory)
                     .get(MainViewModel::class.java)
+        }
+    }
+
+    private fun setupTabs() {
+        frg_accounts__tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+
+            override fun onTabSelected(tab: TabLayout.Tab?) {
+                val position = tab?.position
+               text.text = "select item $position"
+            }
+
+            override fun onTabReselected(tab: TabLayout.Tab?) {
+            }
+
+            override fun onTabUnselected(tab: TabLayout.Tab?) {
+            }
+        })
+        frg_accounts__tabLayout.setScrollPosition(0, 0F, true)
+
+    }
+
+    private fun setupTabsToolbar() {
+        ic_setting_button.setOnClickListener {
+//            mainViewModel.toSettingsScreen()
         }
     }
 

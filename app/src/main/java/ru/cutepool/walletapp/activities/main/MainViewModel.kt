@@ -18,6 +18,10 @@ class MainViewModel(private val router: Router) : BackViewModel(router), Lifecyc
         router.newRootChain(Screens.AccountsScreen())
     }
 
+    fun toSettingsScreen() {
+        router.navigateTo(Screens.SettingsScreen())
+    }
+
     fun setNavigator(navigator: SupportAppNavigator) {
         this.navigator = navigator
     }
