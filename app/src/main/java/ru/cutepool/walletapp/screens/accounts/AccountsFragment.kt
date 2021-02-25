@@ -15,6 +15,7 @@ import ru.cutepool.walletapp.RouterViewModelFactory
 import ru.cutepool.walletapp.activities.main.MainViewModel
 import ru.cutepool.walletapp.helper.CiceroneHelper
 import ru.cutepool.walletapp.models.NamesTabs
+import ru.cutepool.walletapp.screens.page.TabPagerAdapter
 
 
 class AccountsFragment : Fragment() {
