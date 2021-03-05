@@ -1,4 +1,4 @@
-package ru.cutepool.walletapp.screens.page
+package ru.cutepool.walletapp.screens.page.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -11,7 +11,9 @@ class PageItemsAdapter : RecyclerView.Adapter<PageItemsAdapter.ItemViewHolder>()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
         val itemView =
             LayoutInflater.from(parent.context).inflate(R.layout.item_card, parent, false)
-        return ItemViewHolder(itemView)
+        return ItemViewHolder(
+            itemView
+        )
     }
 
     override fun getItemCount(): Int {
