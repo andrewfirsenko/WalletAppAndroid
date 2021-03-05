@@ -29,7 +29,7 @@
         <item name="colorPrimary">#FFFFFF</item>
         <item name="colorSurface">#65BCBF</item>
         <item name="colorOnSurface">#B3FFFFFF</item>
-        <item name="android:fontFamily">@font/sf_pro_regular</item>
+        <item name="android:fontFamily">@font/sf_pro_semibold_medium</item>
     </style>
 
 </resources>

@@ -10,4 +10,5 @@
 
     <color name="color_primary">#65BCBF</color>
     <color name="color_primary_dark">#42979A</color>
+    <color name="color_card_name">#99232C2D</color>
 </resources>
