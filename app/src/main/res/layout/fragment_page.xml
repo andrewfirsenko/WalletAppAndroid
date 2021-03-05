@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:overScrollMode="never"
+    android:scrollbars="none">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/frg_page__app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <com.smarteist.autoimageslider.SliderView
+            android:id="@+id/frg_page__balance"
+            android:layout_width="match_parent"
+            android:layout_height="166dp"
+            app:layout_scrollFlags="scroll|snap"
+            app:sliderAnimationDuration="600"
+            app:sliderAutoCycleEnabled="false"
+            app:sliderIndicatorAnimationDuration="600"
+            app:sliderIndicatorGravity="center_horizontal|bottom"
+            app:sliderIndicatorMargin="15dp"
+            app:sliderIndicatorOrientation="horizontal"
+            app:sliderIndicatorPadding="3dp"
+            app:sliderIndicatorRadius="2dp"
+            app:sliderIndicatorSelectedColor="#636479"
+            app:sliderIndicatorUnselectedColor="#303136"
+            app:sliderScrollTimeInSec="1"
+            app:sliderStartAutoCycle="false" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/frg_page__rv_items"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+        tools:itemCount="5"
+        tools:listitem="@layout/item_card" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

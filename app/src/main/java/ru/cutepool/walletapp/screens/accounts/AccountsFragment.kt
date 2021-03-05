@@ -15,11 +15,13 @@ import ru.cutepool.walletapp.RouterViewModelFactory
 import ru.cutepool.walletapp.activities.main.MainViewModel
 import ru.cutepool.walletapp.helper.CiceroneHelper
 import ru.cutepool.walletapp.models.NamesTabs
+import ru.cutepool.walletapp.screens.page.adapter.TabPagerAdapter
 
 
 class AccountsFragment : Fragment() {
 
     private lateinit var mainViewModel: MainViewModel
+    private lateinit var adapter: TabPagerAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -61,9 +63,11 @@ class AccountsFragment : Fragment() {
             }
 
             override fun onTabReselected(tab: TabLayout.Tab?) {
+
             }
 
             override fun onTabUnselected(tab: TabLayout.Tab?) {
+
             }
         })
         frg_accounts__tabLayout.setScrollPosition(0, 0F, true)
@@ -77,15 +81,9 @@ class AccountsFragment : Fragment() {
     }
 
     private fun initViewPager() {
-        frg_accounts__view_pager.adapter =
-            TabPagerAdapter(
-                requireActivity().supportFragmentManager,
-                lifecycle
-            )
-        TabLayoutMediator(frg_accounts__tabLayout, frg_accounts__view_pager) { tab, position ->
-            val name = context?.getString(NamesTabs.values()[position].nameResource)
-            tab.text = name
-        }.attach()
+        adapter = TabPagerAdapter(childFragmentManager)
+        frg_accounts__view_pager.adapter = TabPagerAdapter(childFragmentManager)
+        frg_accounts__tabLayout.setupWithViewPager(frg_accounts__view_pager)
     }
 
     companion object {
