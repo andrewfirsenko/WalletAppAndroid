@@ -47,4 +47,7 @@ dependencies {
 
     //navigation
     implementation 'ru.terrakok.cicerone:cicerone:5.1.0'
+
+    //custom recycler slider
+    implementation 'com.github.smarteist:autoimageslider:1.3.9'
 }
