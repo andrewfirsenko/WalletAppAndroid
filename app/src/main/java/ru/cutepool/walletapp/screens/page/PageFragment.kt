@@ -20,6 +20,7 @@ class PageFragment(private val tab: NamesTabs) : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        retainInstance = true
         return inflater.inflate(R.layout.fragment_page, container, false)
     }
 
