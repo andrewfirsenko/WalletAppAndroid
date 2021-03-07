@@ -70,7 +70,6 @@ class AccountsFragment : Fragment() {
 
             }
         })
-        frg_accounts__tabLayout.setScrollPosition(0, 0F, true)
 
     }
 
