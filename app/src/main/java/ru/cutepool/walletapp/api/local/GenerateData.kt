@@ -46,7 +46,7 @@ object GenerateData {
     fun generateCards(count: Int): List<Card> {
         val data = mutableListOf<Card>()
         for (i in 1..count) {
-            val amount = BigDecimal((-100000..100000).random().toDouble() / 100).setScale(2, RoundingMode.DOWN)
+            val amount = BigDecimal((-100000000..100000000).random().toDouble() / 100).setScale(2, RoundingMode.DOWN)
             data.add(
                 Card(
                     id = "id_$i",
