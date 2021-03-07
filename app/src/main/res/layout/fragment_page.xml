@@ -14,7 +14,8 @@
         android:id="@+id/frg_page__app_bar_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fitsSystemWindows="true">
+        android:fitsSystemWindows="true"
+        app:elevation="0dp">
 
         <com.smarteist.autoimageslider.SliderView
             android:id="@+id/frg_page__balance"
