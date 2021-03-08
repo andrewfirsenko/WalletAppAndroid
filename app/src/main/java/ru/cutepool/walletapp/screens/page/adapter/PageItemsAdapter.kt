@@ -13,7 +13,7 @@ import java.math.BigDecimal
 
 class PageItemsAdapter : RecyclerView.Adapter<PageItemsAdapter.ItemViewHolder>() {
 
-    var cards: MutableList<Card> = mutableListOf()
+    private var cards: MutableList<Card> = mutableListOf()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
         val itemView =
