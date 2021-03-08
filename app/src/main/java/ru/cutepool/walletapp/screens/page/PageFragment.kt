@@ -17,6 +17,8 @@ import ru.cutepool.walletapp.screens.page.adapter.PageItemsAdapter
 
 class PageFragment(private val tab: NamesTabs) : Fragment() {
 
+    private val adapter = PageItemsAdapter()
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -33,9 +35,7 @@ class PageFragment(private val tab: NamesTabs) : Fragment() {
         initRecyclerView()
 
         val cards = GenerateData.generateCards(10)
-        for (card in cards) {
-            Log.d("log", "${card.name} ${card.amount}")
-        }
+        adapter.updateData(cards)
     }
 
     private fun initViewPagerBalance() {
@@ -45,8 +45,7 @@ class PageFragment(private val tab: NamesTabs) : Fragment() {
 
     private fun initRecyclerView() {
         frg_page__rv_items.layoutManager = LinearLayoutManager(context)
-        frg_page__rv_items.adapter =
-            PageItemsAdapter()
+        frg_page__rv_items.adapter = adapter
     }
 
     override fun onPause() {
